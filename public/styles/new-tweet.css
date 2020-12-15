@@ -1,0 +1,26 @@
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#tweet-text {
+  height: 40px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: #f4f1ec;
+  padding-bottom: 0;
+}
+
+#countButt {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+}
+
+#countButt button {
+  background-color: #4056A1;
+  color: white;
+}
