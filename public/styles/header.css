@@ -1,4 +1,4 @@
-header {
+#page-header {
   height: 400px;
   width: 100%;
   background: url("/images/brushed-alum.png");
@@ -9,6 +9,6 @@ header {
   justify-content: center;
 }
 
-header h2 {
+#page-header h2 {
   margin-top: 0;
 }

@@ -1,0 +1,76 @@
+.all-tweets {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 2em;
+  background-color: #f4f1ec;
+  border: 2px solid black;
+  opacity: 0.8;
+}
+
+.all-tweets header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f1ec;
+  font-size: 0.7em;
+  height: 100px;
+  margin: 0 18px;
+}
+
+.all-tweets header div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+}
+
+.all-tweets header div i {
+  font-size: 40px;
+  margin-right: 5px;
+}
+
+#tweet-handle {
+  color: #4056A1;
+  opacity: 0;
+}
+
+.all-tweets:hover #tweet-handle {
+  opacity: 0.7;
+}
+
+.all-tweets:hover {
+  opacity: 1;
+  box-shadow: 12px 12px 2px 1px #6075b9;
+}
+
+footer p {
+  margin: 0;
+}
+
+.all-tweets footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.6em;
+  margin: 0 25px;
+  margin-top: 5px;
+  margin-bottom: 1em;
+}
+
+.all-tweets footer i {
+  color: #4056A1;
+  font-size: 15px;
+}
+
+#tweet-post {
+  width: 95%;
+  margin: 0.2em 1em;
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: #f4f1ec;
+}
+
+.all-tweets i {
+  font-size: 1.2em;
+}
