@@ -32,6 +32,13 @@
 
 
 $(document).ready(() => {
+  //used to safely render insecure text
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
   //creates $tweet HTML data from "/tweet/" database
   const createTweetElement = tweetData => {
     const { userName, avatars, handle, content, createdAt } = tweetData;
@@ -43,7 +50,7 @@ $(document).ready(() => {
         </div>
           <h2 id="tweet-handle">${tweetData.handle}</h2>
       </header>
-        <p id="tweet-post">${tweetData.content}</p>
+        <p id="tweet-post">${escape(tweetData.content)}</p>
       <footer>
         <p>${tweetData.createdAt}</p>
         <div id="tweet-reacts">
@@ -51,7 +58,7 @@ $(document).ready(() => {
           <i class="fas fa-retweet"></i>
           <i class="fas fa-heart"></i>
         </div>
-        </footer>
+      </footer>
     `)
     return $tweet;
   };
@@ -68,7 +75,7 @@ $(document).ready(() => {
         content: post.content.text,
         createdAt: post.created_at,
       });
-      $(".all-tweets").append(newTweet);
+      $(".all-tweets").prepend(newTweet);
     }
   };
 
@@ -94,8 +101,9 @@ $(document).ready(() => {
         }
       )
     }
+    $("form")[0].reset();
   });
-
+ 
   //GET to /tweets/, render new tweet to webpage
   const loadTweets = function() {
     $.get("/tweets/", function (data) {
