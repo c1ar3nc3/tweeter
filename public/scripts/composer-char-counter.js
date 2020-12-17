@@ -9,6 +9,7 @@ $(document).ready(function() {
       counter.addClass("negativeChar");
     } else {
       counter.removeClass("negativeChar");
+      $(".err p").slideUp("fast");
     }
   })
 });

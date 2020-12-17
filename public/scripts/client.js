@@ -86,9 +86,9 @@ $(document).ready(() => {
   $("form").on("submit", function (event) {
     event.preventDefault();
     if ($('#tweet-text').val().length > 140) {
-      alert("Max characters reached!")
+      $("#too-many").slideDown("fast");
     } else if ($('#tweet-text').val().length < 1) {
-      alert("Tweet cannot be empty!")
+      $("#no-input").slideDown("fast");
     } else {
       const formData = $(this).serialize();
       $.post("/tweets/", formData)

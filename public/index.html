@@ -54,6 +54,10 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div class ="err">
+          <p id="no-input"><i class="fas fa-bomb"></i>ERROR! Tweet cannot be nothing!</p>
+          <p id="too-many"><i class="fas fa-bomb"></i>ERROR! Tweet is too many characters!</p>
+        </div>
         <h2>Compose Tweet</h2>
         <form class="submit-tweet" action="/tweets" method="POST">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>

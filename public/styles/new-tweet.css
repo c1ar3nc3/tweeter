@@ -28,3 +28,16 @@
 .negativeChar {
   color: red;
 }
+
+.err p {
+  color: red;
+  display: none;
+  font-weight: bold;
+  margin: 0 0.8em;
+  padding: 0.6em;
+  border: 0.1em dashed red;
+}
+
+.err {
+  display: inline-block;
+}
