@@ -1,10 +1,10 @@
 .all-tweets {
-  display: flex;
+  display: block;
   flex-direction: column;
   width: 100%;
   margin: 2em 0;
   background-color: #f4f1ec;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   opacity: 0.8;
 }
 
@@ -36,11 +36,11 @@
   opacity: 0;
 }
 
-.all-tweets:hover #tweet-handle {
+.tweet-card:hover #tweet-handle {
   opacity: 0.7;
 }
 
-.all-tweets:hover {
+.tweet-card:hover {
   opacity: 1;
   box-shadow: 12px 12px 2px 1px #6075b9;
 }
@@ -73,4 +73,9 @@ footer p {
 
 .all-tweets i {
   font-size: 1.2em;
+}
+
+.tweet-card {
+  border: 2px solid black;
+  margin: 1em 0;
 }

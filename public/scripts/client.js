@@ -43,6 +43,7 @@ $(document).ready(() => {
   const createTweetElement = tweetData => {
     const { userName, avatars, handle, content, createdAt } = tweetData;
     let $tweet = $(`
+    <div class="tweet-card">
       <header>
         <div>
           <img src = ${tweetData.avatars}>
@@ -59,6 +60,7 @@ $(document).ready(() => {
           <i class="fas fa-heart"></i>
         </div>
       </footer>
+    </div>
     `)
     return $tweet;
   };
