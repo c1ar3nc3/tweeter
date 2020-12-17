@@ -70,6 +70,23 @@ $(document).ready(() => {
   };
   renderTweets(tweetData);
 
+  $("form").on("submit", function (event) {
+    event.preventDefault();
+    const formData = $(this).serialize();
+    $.post("/tweets/", formData)
+      .then (function() {
+        $.getJSON(`/tweets`)
+        .then (data => {
+          const newTweetArray = [];
+          const currentTweet = data[data.length -1];
+          newTweetArray.push(currentTweet);
+          renderTweets(newTweetArray);
+        })
+      })
+    
+  });
+
+
 });
 
 
