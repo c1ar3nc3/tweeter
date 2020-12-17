@@ -65,6 +65,11 @@ $(document).ready(() => {
     return $tweet;
   };
 
+  const getFormattedDate = function () {
+    const date = new Date().toDateString();
+    return date;
+  }
+
   // loops through tweets
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
@@ -75,7 +80,7 @@ $(document).ready(() => {
         avatars: post.user.avatars,
         handle: post.user.handle,
         content: post.content.text,
-        createdAt: post.created_at,
+        createdAt: getFormattedDate(post.created_at),
       });
       $(".all-tweets").prepend(newTweet);
     }

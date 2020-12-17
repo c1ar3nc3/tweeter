@@ -2,9 +2,8 @@
   display: block;
   flex-direction: column;
   width: 100%;
-  margin: 2em 0;
+  margin: 0;
   background-color: #f4f1ec;
-  /* border: 2px solid black; */
   opacity: 0.8;
 }
 
@@ -78,4 +77,15 @@ footer p {
 .tweet-card {
   border: 2px solid black;
   margin: 1em 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .all-tweets {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+  }
+  .tweet-card {
+    width: 100%;
+  }
 }

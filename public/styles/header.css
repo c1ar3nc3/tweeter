@@ -1,8 +1,8 @@
 #page-header {
   height: 400px;
   width: 100%;
-  background: url("/images/brushed-alum.png");
-  background-color: rgb(140, 200, 250);
+  background-color: #5a88a6;
+  background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,4 +11,16 @@
 
 #page-header h2 {
   margin-top: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  #page-header {
+    display: flex;
+    float: left;
+    flex-direction: column;
+    margin: 3em;
+    width: 25%;
+    height: auto;
+    padding: 1em;
+  }
 }
