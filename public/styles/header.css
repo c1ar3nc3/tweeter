@@ -1,8 +1,9 @@
 #page-header {
   height: 400px;
   width: 100%;
-  background-color: #5a88a6;
+  background-color: #4056A1;
   background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,6 +19,10 @@
     display: flex;
     float: left;
     flex-direction: column;
+    background-color: #4056A1;
+    background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
+    border: 0.5em groove #4056A1;
+    color: white;
     margin: 3em;
     width: 25%;
     height: auto;
